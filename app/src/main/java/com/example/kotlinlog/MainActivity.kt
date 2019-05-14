@@ -10,10 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val human1 = Human("John",5)
+        val human1 = Human("John",5,"週末はどこに遊びますか")
         human1.say()
+        human1.think()
 
-        val human2 = Human("週末はどこに遊びますか")
+        val human2 = Human("ワンワン",10,"晩ごはん何を食べましか")
+        human2.say()
         human2.think()
     }
 
@@ -41,12 +43,12 @@ class MainActivity : AppCompatActivity() {
             this.hobby = hobby
 
         }
-        constructor(name: String,age: Int) : this(name,age,""){
-
-        }
-        constructor(hobby:String):this("",0,hobby) {
-
-        }
+//        constructor(name: String,age: Int) : this(name,age,""){
+//
+//        }
+//        constructor(hobby:String):this("",0,hobby) {
+//
+//        }
 
 
         override fun say() {
